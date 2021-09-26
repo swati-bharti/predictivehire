@@ -1,0 +1,14 @@
+version: '3'
+services:
+  apigql:
+    build: .
+    environment:
+      JWT_TOKEN: ${JWT_TOKEN}
+      MONGO_USER: ${MONGO_USER}
+      MONGO_PASSWORD: ${MONGO_PASSWORD}
+    command: npm run start:dev
+    volumes:
+      - .:/app/
+      - /app/node_modules
+    ports:
+      - "8080:8080"

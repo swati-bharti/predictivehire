@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type VacancyType {
+  id: ID!
+  title: String!
+  jobDescription: String!
+  datePosted: String!
+}
+
+type Query {
+  getAllVacancies: [VacancyType!]!
+  findOne(id: String!): VacancyType!
+}
+
+type Mutation {
+  addVacancy(input: VacancyInput!): VacancyType!
+  updateVacancy(datePosted: String!, jobDescription: String!, title: String!, id: String!): VacancyType!
+  deleteVacancy(id: String!): VacancyType!
+}
+
+input VacancyInput {
+  title: String!
+  jobDescription: String!
+  datePosted: String!
+}
