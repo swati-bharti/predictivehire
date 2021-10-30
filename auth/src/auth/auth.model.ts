@@ -10,4 +10,5 @@ export interface User extends mongoose.Document{
     usename:string;
     password:string;
     role:string;
+ //Hello
 }
